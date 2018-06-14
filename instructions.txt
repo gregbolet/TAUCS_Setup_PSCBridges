@@ -1,0 +1,13 @@
+
+
+Here are the steps you should follow to setup TAUCS on your bridges.psc.edu account.
+
+1 - Extract the TAUCS program files to said directory and enter that directory
+2 - Go into the 'config' directory and replace 'linux.mk' and 'linux_mkl.mk' with the ones provided by this repo
+3 - Go back up a directory and run: './configure variant=_mkl'
+4 - Then run 'make' (may take a minute or two)
+5 - To make and run the test scripts run: './testscript variant=_mkl'
+6 - Look at the 'testscript.log' file to verify that the tests passed
+7 - You're all set!
+
+Note: This variant excludes the Cilk modules
