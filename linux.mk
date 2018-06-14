@@ -36,7 +36,7 @@ RM        = rm -rf
 #            -L /usr/lib/gcc-lib/i386-redhat-linux/2.96 -lg2c
 #LIBLAPACK = -L /home/stoledo/Public/Linux_P4SSE2/lib -llapack
 
-LIBBLAS   = -lf77blas -mkl=parallel -latlas
+LIBBLAS   = -lf77blas -latlas
 LIBLAPACK = -llapack
 
 LIBMETIS  = /usr/lib64/libmetis.so.0 
