@@ -10,4 +10,4 @@ Here are the steps you should follow to setup TAUCS on your bridges.psc.edu acco
 6 - Look at the 'testscript.log' file to verify that the tests passed
 7 - You're all set!
 
-Note: This variant excludes the Cilk modules
+Note: This variant excludes the Cilk modules. Currently the test_linsolve test fails...
