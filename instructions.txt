@@ -3,12 +3,12 @@
 Here are the steps you should follow to setup TAUCS on your bridges.psc.edu account.
 
 1 - Extract the TAUCS program files to said directory and enter that directory
-2 - Change you CC environment variable to 'icc' (run: 'export CC=icc')
-3 - Go into the 'config' directory and replace 'linux.mk' and 'linux_mkl.mk' with the ones provided by this repo
-4 - Go back up a directory and run: './configure variant=_mkl'
-5 - Then run 'make' (may take a minute or two)
-6 - To make and run the test scripts run: './testscript variant=_mkl'
-7 - Look at the 'testscript.log' file to verify that the tests passed
-8 - You're all set!
+2 - Copy 'linux_intelmkl.mk' into the 'config' directory
+3 - Go back up a directory and run: './configure variant=_intelmkl'
+4 - Then run 'make' (may take a minute or two)
+5 - To make and run the test scripts run: './testscript variant=_intelmkl'
+6 - Look at the 'testscript.log' file to verify that the tests passed
+7 - You're all set!
 
-Note: This variant excludes the Cilk modules. Currently the test_linsolve test fails...
+Note: This variant excludes the Cilk modules. Currently the test_linsolve test fails
+because the METIS shared object is somehow not getting linked correctly...
