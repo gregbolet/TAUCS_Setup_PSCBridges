@@ -14,9 +14,11 @@ FC        = ifort
 FFLAGS    = -O3
 FOUTFLG   = -o ./
 
-
 CC        = icc
-CFLAGS    = -O3 -Wall -Werror -std=c99
+CFLAGS    = -O3 -Wall -Werror -std=c99 \
+	    -I/home/gbolet/Research/METIS/metis-4.0.3/Lib \
+            -I/home/gbolet/Research/METIS/metis-4.0.3/Programs \
+
 
 COUTFLG   = -o ./
 
@@ -32,7 +34,9 @@ RM        = rm -rf
 
 LIBBLAS   = -mkl=parallel -lpthread
 LIBLAPACK =
-LIBMETIS  = /usr/lib64/libmetis.so.0 
+LIBMETIS  = /home/gbolet/Research/METIS/metis-4.0.3/libmetis.a
+
+#LIBMETIS  = /usr/lib64/libmetis.so.0 
 
 LIBF77 = -lifcoremt
 LIBC   =

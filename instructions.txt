@@ -4,11 +4,12 @@ Here are the steps you should follow to setup TAUCS on your bridges.psc.edu acco
 
 1 - Extract the TAUCS program files to said directory and enter that directory
 2 - Copy 'linux_intelmkl.mk' into the 'config' directory
-3 - Go back up a directory and run: './configure variant=_intelmkl'
-4 - Then run 'make' (may take a minute or two)
-5 - To make and run the test scripts run: './testscript variant=_intelmkl'
-6 - Look at the 'testscript.log' file to verify that the tests passed
-7 - You're all set!
+3 - Download and make METIS (v4.0.3); change 'linux_intelmkl.mk' file to point to your METIS build
+4 - Go to the folder where you extracted TAUCS and run: './configure variant=_intelmkl'
+5 - Then run 'make' (may take a minute or two)
+6 - To make and run the test scripts run: './testscript variant=_intelmkl'
+7 - Look at the 'testscript.log' file to verify that the tests passed
+8 - You're all set!
 
-Note: This variant excludes the Cilk modules. Currently the test_linsolve test fails
-because the METIS shared object is somehow not getting linked correctly...
+Notes: This variant excludes the Cilk modules. 
+       If everything above is done correctly, the tests should all pass.
