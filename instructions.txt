@@ -4,7 +4,7 @@ Here are the steps you should follow to setup TAUCS on your bridges.psc.edu acco
 
 1 - Extract the TAUCS program files to said directory and enter that directory
 2 - Copy 'linux_intelmkl.mk' into the 'config' directory
-3 - Download and make METIS (v4.0.3); change 'linux_intelmkl.mk' file to point to your METIS build
+3 - Download and make METIS (v4.0.3); change the 'linux_intelmkl.mk' file contents to point to your METIS files
 4 - Go to the folder where you extracted TAUCS and run: './configure variant=_intelmkl'
 5 - Then run 'make' (may take a minute or two)
 6 - To make and run the test scripts run: './testscript variant=_intelmkl'
