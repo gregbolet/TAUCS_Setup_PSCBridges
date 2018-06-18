@@ -10,14 +10,16 @@ F2CEXT=.f
 PATHSEP=/
 DEFFLG=-D
 
+METISROOT = /home/gbolet/Research/METIS/metis-4.0.3
+
 FC        = ifort
 FFLAGS    = -O3
 FOUTFLG   = -o ./
 
 CC        = icc
 CFLAGS    = -O3 -Wall -Werror -std=c99 \
-	    -I/home/gbolet/Research/METIS/metis-4.0.3/Lib \
-            -I/home/gbolet/Research/METIS/metis-4.0.3/Programs \
+	    -I${METISROOT}/Lib \
+            -I${METISROOT}/Programs
 
 
 COUTFLG   = -o ./
@@ -34,7 +36,7 @@ RM        = rm -rf
 
 LIBBLAS   = -mkl=parallel -lpthread
 LIBLAPACK =
-LIBMETIS  = /home/gbolet/Research/METIS/metis-4.0.3/libmetis.a
+LIBMETIS  = ${METISROOT}/libmetis.a
 
 #LIBMETIS  = /usr/lib64/libmetis.so.0 
 
